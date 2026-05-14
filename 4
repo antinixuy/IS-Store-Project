@@ -1,0 +1,17 @@
+# Исходный список
+data = [-3, 5, -1, 2, -8, 10, 0, 7]
+
+# Способ 1: генератор списка
+result_gen = sum(x**2 for x in data if x > 0)
+print("Генератор списка:", result_gen)
+
+# Способ 2: map + filter
+result_map_filter = sum(map(lambda x: x**2, filter(lambda x: x > 0, data)))
+print("map + filter:", result_map_filter)
+
+# Способ 3: обычный цикл
+total = 0
+for x in data:
+    if x > 0:
+        total += x**2
+print("Цикл:", total)

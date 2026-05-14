@@ -1,0 +1,22 @@
+from functools import reduce
+
+# Данные
+nums = [2, 3, 4, 5]
+strings = ["Привет", " ", "мир", "!"]
+
+# Произведение всех чисел
+product = reduce(lambda a, b: a * b, nums)
+print("Произведение:", product)
+
+# Минимальное число
+minimum = reduce(lambda a, b: a if a < b else b, nums)
+print("Минимальное:", minimum)
+
+# Объединить список строк
+concatenated = reduce(lambda a, b: a + b, strings)
+print("Объединение строк:", concatenated)
+
+# Факториал числа n
+n = 5
+factorial = reduce(lambda a, b: a * b, range(1, n+1))
+print(f"Факториал {n}: {factorial}")
